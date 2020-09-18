@@ -42,7 +42,16 @@ export default function List() {
 
   return (
     <div className="container">
+      <p>
+        In this example, your Auth Webhook is already setup, and we've created a
+        little todo list using a Room Service{" "}
+        <a href="https://docs.roomservice.dev/docs/concepts/lists">List</a>.
+        You'll want to replace the API_KEY in{" "}
+        <code>{"/pages/api/roomservice.js"}</code> before you get started.{" "}
+      </p>
+
       <h2>Todos</h2>
+      <p>Press enter to add a new todo!</p>
       <input
         type="text"
         value={text}
