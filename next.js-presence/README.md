@@ -13,9 +13,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Deploy your own
-
-Deploy the example using Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/getroomservice/examples/tree/master/next.js-presence)
