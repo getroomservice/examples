@@ -6,11 +6,21 @@ This repo contains examples of Room Service in different situations.
 
 ### [next.js-minimal](https://github.com/getroomservice/examples/tree/master/next.js-minimal)
 
-This example has a basic setup with Next.js and shows off [Presence](https://docs.roomservice.dev/docs/concepts/presence), Room Service's real-time user metadata. Use it as a starting point to build things like live cursors. 
+This example has a basic setup with Next.js and an [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) setup already. Use it as a starting point to build the multiplayer app of your dreams.
 
 Copy this into your terminal to start here:
 ```sh
 curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-minimal
+```
+
+
+### [next.js-presence](https://github.com/getroomservice/examples/tree/master/next.js-presence)
+
+This example has a basic setup with Next.js and shows off [Presence](https://docs.roomservice.dev/docs/concepts/presence), Room Service's real-time user metadata. Use it as a starting point to build things like live cursors. 
+
+Copy this into your terminal to start here:
+```sh
+curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-presence
 ```
 
 ### [next.js-todolist](https://github.com/getroomservice/examples/tree/master/next.js-todolist)
