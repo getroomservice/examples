@@ -1,6 +1,6 @@
 # Room Service
 
-This repo contains examples of Room Service in different situations.
+This repo contains examples of [Room Service](https://docs.roomservice.dev/) in different situations.
 
 ## Examples
 
