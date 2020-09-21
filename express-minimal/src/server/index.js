@@ -1,16 +1,20 @@
 const express = require("express");
+const fetch = require("node-fetch");
 const app = express();
-const port = 3000;
+const port = 8080;
 
-app.use(express.static("./dist"));
+app.use(express.static("dist"));
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "./dist/index.html");
-});
+const API_KEY = "HjCuI4jxFy9B9TJ0UBvau";
 
-const API_KEY = "YOUR_API_KEY_HERE";
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-app.post("/roomservice", async (req, res) => {
+app.post("/api/roomservice", async (req, res) => {
   const body = req.body;
   const user = "some-user-" + getRandomInt(1, 200);
 
@@ -25,6 +29,12 @@ app.post("/roomservice", async (req, res) => {
       resources: body.resources,
     }),
   });
+
+  if (r.status !== 200) {
+    throw new Error(
+      `The API call to Room Service failed! (${r.status}) Be sure to update the API_KEY to your own.`
+    );
+  }
 
   const json = await r.json();
   res.json(json);
