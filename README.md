@@ -31,3 +31,12 @@ Copy this into your terminal to use this example:
 ```sh
 curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-todolist
 ```
+
+### [express-minimal](https://github.com/getroomservice/examples/tree/master/express-minimal)
+
+This example has a basic setup with a basic Express server and an [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) setup already. 
+
+Copy this into your terminal to use this example:
+```sh
+curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- express-minimal
+```
