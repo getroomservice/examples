@@ -1,0 +1,15 @@
+{
+  "name": "express-minimal",
+  "version": "1.0.0",
+  "author": "Flaque",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "start": "node ./server/server.js",
+    "build": "webpack browser --output-path ./backend/dist"
+  }
+}
