@@ -7,7 +7,7 @@ function useList(roomName, listName) {
   useEffect(() => {
     async function load() {
       const client = new RoomService({
-        auth: "/api/hello",
+        auth: "/api/roomservice",
       });
       const room = await client.room(roomName);
       const l = await room.list(listName);
