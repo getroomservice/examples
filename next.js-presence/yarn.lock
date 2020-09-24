@@ -1035,10 +1035,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.5.3.tgz#a14fb6489d412b201b98aa44716fb8727ca4c6ae"
   integrity sha512-W3VKOqbg+4Kw+k6M/SODf+WIzwcx60nAemGV1nNPa/yrDtAS2YcJfqiswrJ3+2nJHzqefAFWn4XOfM0fy8ww2Q==
 
-"@roomservice/browser@1.0.0-21":
-  version "1.0.0-21"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-1.0.0-21.tgz#622e33aaace21b2f245e4590f9a462abd5940cf1"
-  integrity sha512-2TpqJXo35M87SfnfKIJ/9c2XhZWGPSOlK4x87HZIr1227AxgikAMt5Gn2XkJGiG9rYc2VuNFlIDqlCejcid+HQ==
+"@roomservice/browser@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-1.0.0.tgz#66fe423d6c7534879ed396b59f282d2db138f67a"
+  integrity sha512-rE/lbP627aLS51Xn/FTLF5TP0zHqM8JDd4VdbdrcS4NMcu+n4isxSP4kU06Oolw5l7MgovMN7TGCunVDXrg1JQ==
   dependencies:
     tiny-invariant "^1.1.0"
 
