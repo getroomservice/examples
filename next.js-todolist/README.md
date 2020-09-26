@@ -2,6 +2,11 @@ This example shows off [Lists](https://docs.roomservice.dev/concepts/lists) in R
 
 Then replace "YOUR_API_KEY" in `/pages/api/roomservice.js` to be your actual api key. (Or better yet, use an environment variable!)
 
+Copy this into your terminal to use this example:
+```sh
+curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-todolist
+```
+
 ## Getting Started
 
 First, run the development server:
