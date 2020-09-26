@@ -11,7 +11,7 @@ git clone \
   --depth 1 \
   --filter=blob:none \
   --no-checkout \
-  git@github.com:getroomservice/examples.git \
+  https://github.com/getroomservice/examples.git \
   tmp_examples ;
 
 cd tmp_examples;
