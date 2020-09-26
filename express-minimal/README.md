@@ -2,6 +2,11 @@ This is a minimal example showing off the most basic Room Service setup. An [Aut
 
 Then replace "YOUR_API_KEY" in `/src/server/index.js` to be your actual api key. (Or better yet, use an environment variable!)
 
+Copy this into your terminal to use this example:
+```sh
+curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- express-minimal
+```
+
 ## Getting Started
 
 First, run the development server:
