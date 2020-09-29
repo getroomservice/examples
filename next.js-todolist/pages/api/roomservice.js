@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-const API_KEY = "nPSVHQI__RJ8Bj_Q6lOJA";
+const API_KEY = "YOUR_API_KEY";
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
