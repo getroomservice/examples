@@ -915,10 +915,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@roomservice/browser@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-1.0.1.tgz#c4540e5005af87917a4a05ab46a3f891deb3427d"
-  integrity sha512-qgezZPB+hshp/kL2Rcxeo5Ad3GjMFCXHuVczGEm2wLjDW4hDfCDARaRH6oBtF4mC9JEDV5IUppcdzan2XnloEw==
+"@roomservice/browser@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-2.0.0.tgz#af62683745652388900a863f846f7f58d6944638"
+  integrity sha512-cq6g6ersriV7s1d3lQ0iiVshmpfB5qrMtdd3N8dHEMoKgzRQL3hB0oLslfCfPw5AMiZhEuRb7oWatbY9cqzM7g==
   dependencies:
     tiny-invariant "^1.1.0"
 
