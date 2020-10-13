@@ -11,7 +11,7 @@ function useList(roomName, listName) {
   useEffect(() => {
     async function load() {
       const room = await client.room(roomName);
-      const l = await room.list(listName);
+      const l = room.list(listName);
       setList(l);
 
       room.subscribe(l, (li) => {
