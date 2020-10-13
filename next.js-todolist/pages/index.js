@@ -1,14 +1,15 @@
 import { RoomService } from "@roomservice/browser";
 import { useEffect, useState } from "react";
 
+const client = new RoomService({
+  auth: "/api/roomservice",
+});
+
 function useList(roomName, listName) {
   const [list, setList] = useState();
 
   useEffect(() => {
     async function load() {
-      const client = new RoomService({
-        auth: "/api/roomservice",
-      });
       const room = await client.room(roomName);
       const l = await room.list(listName);
       setList(l);
