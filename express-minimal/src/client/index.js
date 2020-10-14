@@ -6,7 +6,7 @@ const service = new RoomService({
 
 async function start() {
   const room = await service.room("express-minimal");
-  let list = await room.list("todos");
+  let list = room.list("todos");
 
   list = list.push("water plants");
 

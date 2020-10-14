@@ -12,7 +12,7 @@ export default function Home() {
       });
 
       const room = await rs.room("demo");
-      const p = await room.presence();
+      const p = room.presence();
       setPresence(p);
 
       const v = await p.getAll("position");
