@@ -1,41 +1,13 @@
-import { RoomService } from "@roomservice/browser";
-import { useEffect, useState } from "react";
+import { usePresence } from "@roomservice/react";
 
 export default function Home() {
-  const [presence, setPresence] = useState();
-  const [positions, setPositions] = useState({});
-
-  useEffect(() => {
-    async function load() {
-      const rs = new RoomService({
-        auth: "/api/roomservice",
-      });
-
-      const room = await rs.room("demo");
-      const p = room.presence();
-      setPresence(p);
-
-      const v = await p.getAll("position");
-      setPositions(v);
-
-      return room.subscribe(p, "position", (msg) => {
-        setPositions(msg);
-      });
-    }
-
-    load().catch(console.error);
-  }, []);
+  const [positions, setMyPosition] = usePresence("room", "position");
 
   function onMouseMove(e) {
-    if (!presence) return;
-    presence.set(
-      "position",
-      {
-        x: e.clientX,
-        y: e.clientY,
-      },
-      2 // expires in 2 seconds
-    );
+    setMyPosition({
+      x: e.clientX,
+      y: e.clientY,
+    });
   }
 
   return (

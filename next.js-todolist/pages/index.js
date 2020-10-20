@@ -1,29 +1,5 @@
-import { RoomService } from "@roomservice/browser";
-import { useEffect, useState } from "react";
-
-const client = new RoomService({
-  auth: "/api/roomservice",
-});
-
-function useList(roomName, listName) {
-  const [list, setList] = useState();
-
-  useEffect(() => {
-    async function load() {
-      const room = await client.room(roomName);
-      const l = room.list(listName);
-      setList(l);
-
-      room.subscribe(l, (li) => {
-        console.log(li);
-        setList(li);
-      });
-    }
-    load();
-  }, []);
-
-  return [list, setList];
-}
+import { useList } from "@roomservice/react";
+import { useState } from "react";
 
 export default function List() {
   const [list, setList] = useList("lists", "todos");
