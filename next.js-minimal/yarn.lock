@@ -1042,12 +1042,19 @@
   dependencies:
     tiny-invariant "^1.1.0"
 
-"@roomservice/react@0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-0.9.2.tgz#ee59111e46afbf82f6640cb228344d96676ade14"
-  integrity sha512-V1rHJNDniOJ/hcghq0Gv07jzp7m7Wj3/5UavbylXGMb9IHk75ZmcuT/bsweebnRrlf/g2gV3YwnS5krZ+bZm5A==
+"@roomservice/browser@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-2.1.4.tgz#20d6d8667dfe57832a8924804f7f9dce25f9b27d"
+  integrity sha512-34TsRRlAQ9GqFIAoJ1H45HxHopuYWrgDmfExl09tR/8EtGag2q5YaZDA9e9p3WIh0xghQ6a2G1bSWNoQDufNxg==
   dependencies:
-    "@roomservice/browser" "2.1.2"
+    tiny-invariant "^1.1.0"
+
+"@roomservice/react@1.0.0-0":
+  version "1.0.0-0"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-1.0.0-0.tgz#6c45e7fb004418403b4838b7d1514bd2f70290b2"
+  integrity sha512-Tb8nm9hOMTzV2G04FYx7R/OucJ7QKYxKbHoEPfTqjIdK741hASGDQAaLvNsYeRKaoZ2AUp9hdmOje3nUXRFq/g==
+  dependencies:
+    "@roomservice/browser" "2.1.4"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
