@@ -1,7 +1,7 @@
 {
   "name": "express-minimal",
   "version": "1.0.0",
-  "main": "src/server/index.js",
+  "main": "src/server/server.js",
   "author": "Flaque",
   "license": "MIT",
   "dependencies": {

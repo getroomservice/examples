@@ -6,7 +6,11 @@ const port = 8080;
 app.use(express.json());
 app.use(cookieParser());
 
-function isValidSession(session) {
+function getUserIDFromSession(session) {
+  return "my-user-id";
+}
+
+function isAllowedToAccessRoom(userID, room) {
   return true;
 }
 
@@ -15,21 +19,28 @@ function isValidSession(session) {
 const API_KEY = "HjCuI4jxFy9B9TJ0UBvau";
 
 app.post("/api/roomservice", async (req, res) => {
-  const isLoggedIn = isValidSession(req.cookies.session);
-  if (!isLoggedIn) {
+  const body = req.body;
+
+  // Check if this is a valid user
+  const userID = getUserIDFromSession(req.cookies.session);
+  if (!userID) {
     return res.send(401);
   }
 
-  const body = req.body;
+  // Check if this user can access this room
+  const room = body.resources.find((r) => r.object === "room");
+  if (!isAllowedToAccessRoom(room.reference)) {
+    return res.send(401);
+  }
+
   const r = await fetch("https://super.roomservice.dev/provision", {
     method: "POST",
     headers: {
       Authorization: `Bearer: ${API_KEY}`,
       "Content-Type": "application/json",
     },
-
     body: JSON.stringify({
-      user: "my-user-id",
+      user: user,
       resources: body.resources,
     }),
   });
