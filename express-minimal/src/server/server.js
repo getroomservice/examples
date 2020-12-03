@@ -28,10 +28,17 @@ app.post("/api/roomservice", async (req, res) => {
   }
 
   // Check if this user can access this room
-  const room = body.resources.find((r) => r.object === "room");
-  if (!isAllowedToAccessRoom(room.reference)) {
+  if (!isAllowedToAccessRoom(body.room)) {
     return res.send(401);
   }
+
+  const resources = [
+    {
+      object: "room",
+      room: room,
+      permission: "join",
+    },
+  ];
 
   const r = await fetch("https://super.roomservice.dev/provision", {
     method: "POST",
@@ -41,7 +48,7 @@ app.post("/api/roomservice", async (req, res) => {
     },
     body: JSON.stringify({
       user: user,
-      resources: body.resources,
+      resources: resources,
     }),
   });
 
