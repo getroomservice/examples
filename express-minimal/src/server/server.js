@@ -47,7 +47,7 @@ app.post("/api/roomservice", async (req, res) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      user: user,
+      user: userID,
       resources: resources,
     }),
   });
