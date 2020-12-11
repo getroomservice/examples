@@ -35,7 +35,7 @@ app.post("/api/roomservice", async (req, res) => {
   const resources = [
     {
       object: "room",
-      room: room,
+      room: body.room,
       permission: "join",
     },
   ];

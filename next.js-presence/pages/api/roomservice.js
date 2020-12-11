@@ -12,6 +12,14 @@ export default async (req, res) => {
   const body = req.body;
   const user = "some-user-" + getRandomInt(1, 200);
 
+  const resources = [
+    {
+      object: "room",
+      room: body.room,
+      permission: "join",
+    },
+  ];
+
   const r = await fetch("https://super.roomservice.dev/provision", {
     method: "post",
     headers: {
@@ -20,7 +28,7 @@ export default async (req, res) => {
     },
     body: JSON.stringify({
       user: user,
-      resources: body.resources,
+      resources: resources,
     }),
   });
 

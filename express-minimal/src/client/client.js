@@ -32,7 +32,7 @@ async function start() {
 
   list = list.push("water plants");
 
-  room.subscribe(list, (nextList) => {
+  room.subscribe(list, (asArray) => {
     // do something with incoming lists updates
   });
 }

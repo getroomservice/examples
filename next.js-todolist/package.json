@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@roomservice/react": "1.0.0-0",
+    "@roomservice/react": "1.0.0-10",
     "next": "9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1"
