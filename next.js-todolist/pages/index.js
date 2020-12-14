@@ -2,18 +2,17 @@ import { useList } from "@roomservice/react";
 import { useState } from "react";
 
 export default function List() {
-  const [list, setList] = useList("lists", "todos");
+  const [todos, list] = useList("lists", "todos");
   const [text, setText] = useState("");
 
   function onCheckOff(i) {
     if (!list) return;
-    console.log("delete", list);
-    setList(list.delete(i));
+    list.delete(i);
   }
 
   function onEnterPress() {
     if (!list) return;
-    setList(list.push(text));
+    list.push(text);
     setText("");
   }
 
@@ -39,18 +38,17 @@ export default function List() {
           }
         }}
       />
-      {list &&
-        list.toArray().map((l, i) => (
-          <p
-            className="todo"
-            key={JSON.stringify(l) + "-" + i}
-            onClick={() => onCheckOff(i)}
-          >
-            {l.object || l}
-            {"-"}
-            {i}
-          </p>
-        ))}
+      {todos.map((l, i) => (
+        <p
+          className="todo"
+          key={JSON.stringify(l) + "-" + i}
+          onClick={() => onCheckOff(i)}
+        >
+          {l.object || l}
+          {"-"}
+          {i}
+        </p>
+      ))}
       <style jsx>{`
         .container {
           margin: 0 auto;
