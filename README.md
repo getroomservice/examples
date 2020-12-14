@@ -34,16 +34,6 @@ Copy this into your terminal to use this example:
 curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-todolist
 ```
 
-### [next.js-custom-auth](https://github.com/getroomservice/examples/tree/master/next.js-custom-auth)
-
-This example has a basic setup with Next.js and an [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) setup already. Unlike the normal examples, this example shows a more complex, custom auth setup.
-
-Copy this into your terminal to use this example:
-
-```sh
-curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-custom-auth
-```
-
 ### [express-minimal](https://github.com/getroomservice/examples/tree/master/express-minimal)
 
 This example has a basic setup with a basic Express server and an [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) setup already.
