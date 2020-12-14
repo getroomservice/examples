@@ -1,10 +1,10 @@
 import { usePresence } from "@roomservice/react";
 
 export default function Home() {
-  const [positions, setMyPosition] = usePresence("room", "position");
+  const [positions, presence] = usePresence("room", "position");
 
   function onMouseMove(e) {
-    setMyPosition({
+    presence.set({
       x: e.clientX,
       y: e.clientY,
     });
