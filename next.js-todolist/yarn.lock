@@ -1035,10 +1035,10 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.5.3.tgz#a14fb6489d412b201b98aa44716fb8727ca4c6ae"
   integrity sha512-W3VKOqbg+4Kw+k6M/SODf+WIzwcx60nAemGV1nNPa/yrDtAS2YcJfqiswrJ3+2nJHzqefAFWn4XOfM0fy8ww2Q==
 
-"@roomservice/browser@3.0.0-11":
-  version "3.0.0-11"
-  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-3.0.0-11.tgz#4f990c16c4784927910ab1edc8e808ff053fc237"
-  integrity sha512-45vjrdxTuY7dG/lSve7FsFuM2dyxA/63nIMu/GBYGtUOMlmuL3oj1jO4IKn/eKPbX3SBaulvIdjjWKImNJG5Tg==
+"@roomservice/browser@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@roomservice/browser/-/browser-3.0.0.tgz#273d48a33cc0c6e3922e8c576d0f269a592a5673"
+  integrity sha512-gRL+nIsoZIfpgp0ONVYU0vgdtd7T8h8C0/HwwZlv4gQ4RY5WtX0Yregov3x30NzoJcRvSCKcC+aYyh+A19/DLg==
   dependencies:
     "@roomservice/core" "0.3.1"
     tiny-invariant "^1.1.0"
@@ -1050,12 +1050,12 @@
   dependencies:
     tiny-invariant "^1.1.0"
 
-"@roomservice/react@1.0.0-18":
-  version "1.0.0-18"
-  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-1.0.0-18.tgz#539a316c3b2b8e0ac168d3c3259a45585ed2f5a9"
-  integrity sha512-zZXewbxQ2zmIQrc2MuE3EdfJRoncGJKeyKCkwPX5URhOl39X/hIVuVEYQ4uyK8gM/2LjBbhxhIZQWLdAZ+rfqw==
+"@roomservice/react@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@roomservice/react/-/react-1.0.0.tgz#0233379a8c0a7e1e66184ad2762f5851d7868fe5"
+  integrity sha512-bA2VIN0AtwIrItvhLFYeJPab/iGTsv1q3jr350Jh74tXSh1QPflrWeQLjF4+F1izV4nu0YZf8qMsfqCB4ge3WQ==
   dependencies:
-    "@roomservice/browser" "3.0.0-11"
+    "@roomservice/browser" "^3.0.0"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
