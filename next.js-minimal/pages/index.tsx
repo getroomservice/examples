@@ -1,7 +1,10 @@
 import { useMap } from "@roomservice/react";
 
 export default function Home() {
-  const [form, map] = useMap("myroom", "myform");
+  const [form, map] = useMap<{ title: string; description: string }>(
+    "myroom",
+    "myform"
+  );
 
   return (
     <div>
@@ -16,7 +19,7 @@ export default function Home() {
         Title
         <input
           value={form.title}
-          onChange={(e) => map.set("title", e.target.value)}
+          onChange={(e) => map?.set("title", e.target.value)}
         />
       </label>
 
@@ -24,7 +27,7 @@ export default function Home() {
         Description
         <input
           value={form.description}
-          onChange={(e) => map.set("description", e.target.value)}
+          onChange={(e) => map?.set("description", e.target.value)}
         />
       </label>
     </div>

@@ -1,16 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-const API_KEY = "YOUR_API_KEY_HERE";
+import { NextApiRequest, NextApiResponse } from "next";
 
-function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-export default async (req, res) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const body = req.body;
-  const user = "some-user-" + getRandomInt(1, 200);
+  const user = req.body.user;
 
   const resources = [
     {
@@ -23,7 +17,7 @@ export default async (req, res) => {
   const r = await fetch("https://super.roomservice.dev/provision", {
     method: "post",
     headers: {
-      Authorization: `Bearer: ${API_KEY}`,
+      Authorization: `Bearer: ${process.env.ROOMSERVICE_API_KEY}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
