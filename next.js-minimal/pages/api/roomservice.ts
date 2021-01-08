@@ -18,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (!apiKey) {
     const error =
-      "API key not set. Add ROOMSERVICE_API_KEY=<your_api_key> to the .env file on your server.";
+      "API key not set. Grab yours from https://app.roomservice.dev and add ROOMSERVICE_API_KEY=<your_api_key> to a .env file on your server.";
     res.statusCode = 500;
     res.write(error);
     throw error;
