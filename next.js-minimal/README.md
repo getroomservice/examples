@@ -4,7 +4,7 @@ Then replace "YOUR_API_KEY" in `/pages/api/roomservice.js` to be your actual api
 
 Copy this into your terminal to use this example:
 ```sh
-curl https://raw.githubusercontent.com/getroomservice/examples/master/create.sh | bash -s -- next.js-minimal
+yarn create next-app --example https://github.com/getroomservice/examples --example-path next.js-minimal
 ```
 
 ## Getting Started
