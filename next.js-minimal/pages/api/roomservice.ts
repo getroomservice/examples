@@ -2,6 +2,8 @@
 
 import { NextApiRequest, NextApiResponse } from "next";
 
+const apiKey = process.env.ROOMSERVICE_API_KEY;
+
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const body = req.body;
   const user = req.body.user;
@@ -14,7 +16,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   ];
 
-  const apiKey = process.env.ROOMSERVICE_API_KEY;
   if (!apiKey) {
     const error =
       "API key not set. Add ROOMSERVICE_API_KEY=<your_api_key> to the .env file on your server.";
