@@ -26,6 +26,10 @@ async function myAuthFunction(params: {
     throw new Error("Unauthorized!");
   }
 
+  if (response.status !== 200) {
+    throw await response.text();
+  }
+
   const body = await response.json();
   return {
     user: body.user,
@@ -39,7 +43,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <RoomServiceProvider
       //  Don't connect until the userID is set
-      online={userID != undefined}
+      online={userID !== null}
       clientParameters={{
         auth: myAuthFunction,
         //  Passed into myAuthFunction when RoomService connects. Include
@@ -56,20 +60,21 @@ function MyApp({ Component, pageProps }) {
 
 //  Stores a random userID in localStorage. Remove this once you have integrated
 //  your own authentication scheme.
-function useUserID(): string | undefined {
-  const [userID, setUserID] = useState<string>();
+function useUserID(): string | null {
+  const [userID, setUserID] = useState<string | null>(null);
 
   //  useEffect forces this to happen on the client
   useEffect(() => {
-    if (window.localStorage.getItem("roomservice-user") == null) {
+    let userID = window.localStorage.getItem("roomservice-user");
+    if (userID == null) {
       const generateBase62ID = customAlphabet(
         "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
         22
       );
-      const userID = generateBase62ID();
+      userID = generateBase62ID();
       window.localStorage.setItem("roomservice-user", userID);
-      setUserID(userID);
     }
+    setUserID(userID);
   }, []);
 
   return userID;

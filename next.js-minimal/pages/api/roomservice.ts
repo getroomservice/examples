@@ -14,6 +14,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     },
   ];
 
+  const apiKey = process.env.ROOMSERVICE_API_KEY;
+  if (!apiKey) {
+    const error =
+      "API key not set. Add ROOMSERVICE_API_KEY=<your_api_key> to the .env file on your server.";
+    res.statusCode = 500;
+    res.write(error);
+    throw error;
+  }
+
   const r = await fetch("https://super.roomservice.dev/provision", {
     method: "post",
     headers: {
