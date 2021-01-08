@@ -63,7 +63,8 @@ function MyApp({ Component, pageProps }) {
 function useUserID(): string | null {
   const [userID, setUserID] = useState<string | null>(null);
 
-  //  useEffect forces this to happen on the client
+  //  useEffect forces this to happen on the client, since `window` is not
+  //  available on the server during server-side rendering
   useEffect(() => {
     let userID = window.localStorage.getItem("roomservice-user");
     if (userID == null) {
