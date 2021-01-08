@@ -8,7 +8,7 @@ export default function Home() {
   );
 
   useEffect(() => {
-    document.title = form.title;
+    document.title = form.title || "";
   }, [form["title"]]);
 
   return (
