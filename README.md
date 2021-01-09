@@ -3,6 +3,7 @@
 This repo contains examples of [Room Service](https://docs.roomservice.dev/) in different situations.
 
 For help using Room Service, or if you'd like to chat about building multiplayer-enabled apps, join our Discord!  
+
 [![Discord](https://img.shields.io/discord/771809633126842389?color=7289da&label=discord)](https://discord.gg/4KnxXWzfgs)
 
 ## Examples
