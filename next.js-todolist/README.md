@@ -1,4 +1,4 @@
-This is a todo-list typescript example showing off the most basic Room Service setup. An [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) is setup, with Next.js. You'll need to get an API Key for it to run. You can do that at [app.roomservice.dev](https://app.roomservice.dev/register).
+This is a todo-list typescript example showing off a basic Room Service setup. An [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) is setup, with Next.js. You'll need to an API Key for it to run, you can grab one at [app.roomservice.dev](https://app.roomservice.dev/register).
 
 If you're looking for a javscript example, check out [next.js-javascript](https://github.com/getroomservice/examples/next.js-javascript).
 
