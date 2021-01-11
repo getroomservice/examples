@@ -1,4 +1,4 @@
-This is a typescript example demoing Room Service presence, per-user data that can optionally expire. An [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) is setup, with Next.js. You'll need to get an API Key for it to run. You can do that at [app.roomservice.dev](https://app.roomservice.dev/register).
+This is a typescript example demoing Room Service presence, per-user data that can optionally expire. An [Auth Webhook](https://docs.roomservice.dev/docs/concepts/auth) is setup, with Next.js. You'll need an API Key for it to run, you can create one at [app.roomservice.dev](https://app.roomservice.dev/register).
 
 If you're looking for a javscript example, check out [next.js-javascript](https://github.com/getroomservice/examples/next.js-javascript).
 
