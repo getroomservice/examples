@@ -11,7 +11,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const resources = [
     {
       object: "room",
-      room: body.room,
+      reference: body.room,
       permission: "join",
     },
   ];
